@@ -21,6 +21,7 @@ export default function BoxItem({ item, container, placedItems }: { item: any, c
     case 0: // No rotation
       // w, h, d remain the same
       break;
+    // [w, h, d]
     case 1: // Rotate once (clockwise)
       [w, h, d] = [h, w, d]; // Swap width and height
       break;
@@ -31,7 +32,7 @@ export default function BoxItem({ item, container, placedItems }: { item: any, c
       [w, h, d] = [d, h, w]; // Swap height and depth
       break;
     case 4: // Rotate counter-clockwise once
-      [h, w] = [d, w, h]; // Similar to clockwise once
+      [w, h, d] = [d, w, h]; // Similar to clockwise once
       break;
     case 5: // Rotate counter-clockwise twice
       // For a distinct behavior, let's swap width and depth again
@@ -67,9 +68,9 @@ export default function BoxItem({ item, container, placedItems }: { item: any, c
   const posZ = z + d / 2 - cd
   const color = generateColor();
 
-  const boxGeometry = new THREE.BoxGeometry(w, h, d);
+  const boxGeometry = new THREE.BoxGeometry(w, d, h);
   const boxMaterial = new THREE.MeshBasicMaterial({ color: color });
-  boxGeometry.translate(posX, posY, posZ);
+  boxGeometry.translate(posX, posZ, posY);
   const box = new THREE.Mesh(boxGeometry, boxMaterial);
 
 

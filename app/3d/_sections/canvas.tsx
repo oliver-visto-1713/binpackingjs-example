@@ -4,39 +4,896 @@ import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
 import BoxContainer from "../_components/box-container";
 import BoxItem from "../_components/box-item";
-// import { Bin, Item, Packer } from '@owens3364/3d-bin-packing';
+import { Bin, Item, Packer } from '@owens3364/3d-bin-packing';
 
 import data from "@/app/3d/data/data.json"
 export default function BinCanvas() {
   const cameraControlRef = useRef(null);
-  const BinPacking3D = require("binpackingjs").BP3D;
+  // const BinPacking3D = require("binpackingjs").BP3D;
+  // const { Item, Bin, Packer } = BinPacking3D;
   const container = {
     name: 'sample1',
-    x: 18,
-    y: 30,
-    z: 18
+    x: 20,
+    y: 20,
+    z: 20
   }
   const items = [
     {
-      name: "Sistema Food Storage Container Set, 28-pieces",
-      x: 13.75,
-      y: 8,
-      z: 9.5
+      name: "1",
+      x: 20,
+      y: 3,
+      z: 3,
+    },
+
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
     },
     {
-      "id": 98,
-      "x": 11,
-      "y": 9.75,
-      "z": 2.5,
-      "l": 11,
-      "w": 2.5,
-      "h": 9.75,
-      "name": "Dove Deep Moisture Body Wash, 3 x 680 mL",
-      "measurementType": "inches",
-      "color": "#FFD700"
+      name: "1",
+      x: 20,
+      y: 3.5,
+      z: 1,
     },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }, {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }, {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }, {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }, {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    },
+    {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }, {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
+    , {
+      name: "1",
+      x: 5,
+      y: 5,
+      z: 5,
+    }
   ]
-  const { Item, Bin, Packer } = BinPacking3D;
+  // const items = [
+  //   {
+  //     "id": 99,
+  //     "x": 13.75,
+  //     "y": 8,
+  //     "z": 9.5,
+  //     "l": 13.75,
+  //     "w": 9.5,
+  //     "h": 8,
+  //     "name": "Sistema Food Storage Container Set, 28-pieces",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 98,
+  //     "x": 11,
+  //     "y": 9.75,
+  //     "z": 2.5,
+  //     "l": 11,
+  //     "w": 2.5,
+  //     "h": 9.75,
+  //     "name": "Dove Deep Moisture Body Wash, 3 x 680 mL",
+  //     "measurementType": "inches",
+  //     "color": "#FFD700"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 103,
+  //     "x": 9,
+  //     "y": 2.25,
+  //     "z": 3.5,
+  //     "l": 9,
+  //     "w": 3.5,
+  //     "h": 2.25,
+  //     "name": "Q-Tips Cotton Swabs. Ideal for Blending & Applying Make-up, Cleaning Electronics and More",
+  //     "measurementType": "inches",
+  //     "color": "#FF69B4"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   },
+  //   {
+  //     "id": 99,
+  //     "x": 13.75,
+  //     "y": 8,
+  //     "z": 9.5,
+  //     "l": 13.75,
+  //     "w": 9.5,
+  //     "h": 8,
+  //     "name": "Sistema Food Storage Container Set, 28-pieces",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 98,
+  //     "x": 11,
+  //     "y": 9.75,
+  //     "z": 2.5,
+  //     "l": 11,
+  //     "w": 2.5,
+  //     "h": 9.75,
+  //     "name": "Dove Deep Moisture Body Wash, 3 x 680 mL",
+  //     "measurementType": "inches",
+  //     "color": "#FFD700"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 101,
+  //     "x": 10.75,
+  //     "y": 1.5,
+  //     "z": 3.25,
+  //     "l": 10.75,
+  //     "w": 3.25,
+  //     "h": 1.5,
+  //     "name": "Nº 4 Spaghetti PÂTES - Antonio Amato - 500 g",
+  //     "measurementType": "inches",
+  //     "color": "#FF8C00"
+  //   },
+  //   {
+  //     "id": 103,
+  //     "x": 9,
+  //     "y": 2.25,
+  //     "z": 3.5,
+  //     "l": 9,
+  //     "w": 3.5,
+  //     "h": 2.25,
+  //     "name": "Q-Tips Cotton Swabs. Ideal for Blending & Applying Make-up, Cleaning Electronics and More",
+  //     "measurementType": "inches",
+  //     "color": "#FF69B4"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   },
+  //   {
+  //     "id": 104,
+  //     "x": 7,
+  //     "y": 3,
+  //     "z": 5,
+  //     "l": 7,
+  //     "w": 5,
+  //     "h": 3,
+  //     "name": "Antonio Amato - Fusilli No.114 - 500gm 810026810244",
+  //     "measurementType": "inches",
+  //     "color": "#40E0D0"
+  //   }
+  // ]
+
   const packer = new Packer();
 
   const bin = new Bin("bin1", container.x, container.y, container.z)

@@ -6,7 +6,7 @@ export default function BoxContainer({ bin: { x, y, z } }: { bin: { x: number, y
   const yy = y / DIVIDER
   const zz = z / DIVIDER
   console.log(x / 100000)
-  const boxGeometry = new THREE.BoxGeometry(xx, yy, zz);
+  const boxGeometry = new THREE.BoxGeometry(xx, zz, yy);
   const geo = new THREE.EdgesGeometry(boxGeometry);
   const mat = new THREE.LineBasicMaterial({ color: "royalblue", linewidth: 2 });
   const position = new THREE.Vector3(0, 0, 0)
